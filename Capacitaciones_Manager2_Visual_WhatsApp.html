@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Capacitaciones Manager2 - Premium Interactivo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f7;
+        color: #4a4a4a;
+    }
+    header {
+        background: linear-gradient(90deg, #1F4FD8, #3A6BD6);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    header h1 { margin: 0; font-size: 36px; }
+    header p { font-size: 18px; margin-top: 10px; }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .module {
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 25px;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .module:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    .module h2 {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+    }
+    .module h2 i {
+        margin-right: 12px;
+        font-size: 32px;
+        color: #FFD700; /* dorado */
+    }
+
+    .details {
+        background-color: #ffffff;
+        color: #000;
+        border-radius: 15px;
+        padding: 25px;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .details:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .details ul { margin: 0 0 0 20px; }
+    .details ul li { margin-bottom: 8px; font-size: 15px; }
+
+    .note { font-style: italic; font-size: 14px; margin-top: 12px; }
+
+    footer {
+        text-align: center;
+        margin: 40px 0 20px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* Gradientes llamativos */
+    .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
+    .module2 { background: linear-gradient(135deg, #2A6ED4, #4A9CFF); }
+    .module3 { background: linear-gradient(135deg, #3A7CE6, #5AB8FF); }
+    .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); color: #000; }
+    .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); color: #000; }
+
+    /* WhatsApp animado */
+    .whatsapp {
+        position: fixed;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50px;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        animation: pulse 2s infinite;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .whatsapp:hover { transform: scale(1.1); animation: none; }
+    .whatsapp1 { bottom: 20px; }
+    .whatsapp2 { bottom: 90px; }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+        70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    @media (max-width: 600px) {
+        header h1 { font-size: 28px; }
+        header p { font-size: 16px; }
+        .module h2 { font-size: 22px; }
+        .module h2 i { font-size: 28px; }
+        .details ul li { font-size: 14px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Capacitaciones Manager2</h1>
+    <p>Formación práctica y visual para la gestión eficiente de tu empresa</p>
+</header>
+
+<div class="container">
+
+    <div class="module module1">
+        <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
+        <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
+        <div class="details">
+            <ul>
+                <li>Ingreso a Manager en la nube</li>
+                <li>Interfaz general del sistema</li>
+                <li>Uso de carpeta compartida</li>
+                <li>Creación de artículos, rubros y marcas</li>
+                <li>Creación de depósitos</li>
+                <li>Creación de listas de precios</li>
+                <li>Ajuste de existencia</li>
+                <li>Actualización de Precios (Individual y global)</li>
+                <li>Transferencia entre depósitos</li>
+                <li>Reportes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="module module2">
+        <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
+        <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de clientes</li>
+                <li>Categorización de clientes</li>
+                <li>Alta de vendedores</li>
+                <li>Generación de Presupuestos, Notas de Pedido, Remitos, etc.</li>
+                <li>Factura de Venta Directa (o a partir de un comprobante previo)</li>
+                <li>Facturas de Venta de Mostrador</li>
+                <li>Notas de Crédito y Débito</li>
+                <li>Cuentas Corrientes y Cobranzas: visualización y generación de recibos desde Cta. Cte.</li>
+                <li>Emisión de Recibos, pendiente de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Primero se consulta al usuario cuáles son los comprobantes comerciales de venta que van a utilizar.</p>
+        </div>
+    </div>
+
+    <div class="module module3">
+        <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
+        <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de Proveedores</li>
+                <li>Alta compradores</li>
+                <li>Generación de Solicitudes de Compra, Pedidos de Cotización, Órdenes de Compra, Remitos, etc.</li>
+                <li>Carga de Factura de Compra Directa (o a partir de un comprobante previo)</li>
+                <li>Cuentas Corrientes y Pagos: visualización y generación de Órdenes de Pago desde Cta. Cte.</li>
+                <li>Emisión de Órdenes de pago, pendientes de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Se consulta al usuario sobre los comprobantes comerciales de compra que van a utilizar.</p>
+        </div>
+    </div>
+
+    <div class="module module4">
+        <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
+        <div class="details">
+            <ul>
+                <li>Alta de centro de fondos (cajas)</li>
+                <li>Alta de entidades bancarias, cuentas bancarias, chequeras</li>
+                <li>Alta de tarjetas de crédito y planes de pago</li>
+                <li>Alta de grupos y conceptos financieros</li>
+                <li>Registro de movimientos de caja, cierre de centro de fondos, transferencias</li>
+                <li>Registro y conciliación de cuentas bancarias y cheques</li>
+                <li>Otros procesos financieros según usuario</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">La carga de los Actualizadores se enseña en paralelo con el Módulo de Ventas.</p>
+        </div>
+    </div>
+
+    <div class="module module5">
+        <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
+        <div class="details">
+            <p><strong>Objetivo:</strong> Gestionar correctamente la Factura Electrónica.</p>
+            <p class="note">El orden de enseñanza puede variar según cada usuario.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.</p>
+</footer>
+
+<!-- WhatsApp animados -->
+<a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
+<a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
+
+</body>
+</html>
+
