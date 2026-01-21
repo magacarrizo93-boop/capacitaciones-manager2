@@ -18,17 +18,25 @@
     header {
         background: linear-gradient(90deg, #1F4FD8, #3A6BD6);
         color: white;
-        padding: 20px 20px 40px 20px; /* header ajustable según la imagen */
+        padding: 20px 20px 40px 20px;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    header img {
-        max-width: 100%; /* se ajusta al contenedor */
-        height: auto;    /* mantiene proporción */
+    header .logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 20px;
+        gap: 20px; /* separación entre logos */
+    }
+
+    header .logos img {
+        height: 80px;
+        max-width: 100%;
+        object-fit: contain;
     }
 
     header h1 { margin: 0; font-size: 36px; }
@@ -133,26 +141,24 @@
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        header img { max-width: 200px; } /* más pequeño en celular */
+        header .logos img { height: 60px; } /* logos más pequeños en celular */
     }
 </style>
 </head>
 <body>
 
 <header>
-    <!-- Imagen con ambos logos -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="LogoProdigia.jpg" alt="Logos Prodigia y Max Manager2">
+    <div class="logos">
+        <img src="LogoProdigia.jpg" alt="Logo Prodigia">
+        <img src="Logo Manager.jpg" alt="Logo Manager2">
     </div>
-
-    <!-- Título y descripción -->
     <h1>Capacitaciones Manager2</h1>
     <p>Formación práctica y visual para la gestión eficiente de tu empresa</p>
 </header>
 
 <div class="container">
 
-    <!-- Aquí van tus módulos de capacitaciones -->
+    <!-- Módulo 1 -->
     <div class="module module1">
         <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
         <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
@@ -172,6 +178,7 @@
         </div>
     </div>
 
+    <!-- Módulo 2 -->
     <div class="module module2">
         <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
         <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
@@ -193,6 +200,7 @@
         </div>
     </div>
 
+    <!-- Módulo 3 -->
     <div class="module module3">
         <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
         <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
@@ -211,6 +219,7 @@
         </div>
     </div>
 
+    <!-- Módulo 4 -->
     <div class="module module4">
         <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
         <div class="details">
@@ -228,6 +237,7 @@
         </div>
     </div>
 
+    <!-- Módulo 5 -->
     <div class="module module5">
         <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
         <div class="details">
@@ -248,5 +258,6 @@
 
 </body>
 </html>
+
 
 
