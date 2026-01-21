@@ -42,13 +42,13 @@
         box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
-    /* TODOS LOS TITULOS DE MÓDULO EN NEGRO */
+    /* TITULOS DE MÓDULO EN NEGRO */
     .module h2 {
         margin-top: 0;
         display: flex;
         align-items: center;
         font-size: 26px;
-        color: #000; /* títulos negros */
+        color: #000;
     }
     .module h2 i {
         margin-right: 12px;
@@ -56,7 +56,7 @@
         color: #FFD700;
     }
 
-    /* Objetivo de los módulos 1-3 en blanco */
+    /* Objetivo módulos 1-3 en blanco */
     .module1 p strong, .module2 p strong, .module3 p strong {
         color: #fff;
     }
@@ -138,20 +138,20 @@
 
         /* Logo pasa al footer en celular */
         .footer-logo {
-            position: relative;   /* deja de ser fijo */
+            position: relative;
             max-height: 6vh;
             max-width: 25vw;
-            margin: 20px 0 0 0;   /* separa del contenido */
+            margin: 20px 0 0 0;
             left: auto;
             bottom: auto;
             display: block;
         }
 
-        /* WhatsApp más arriba para celular */
+        /* WhatsApp más arriba */
         .whatsapp1 { bottom: 60px; padding: 10px 15px; font-size: 14px; }
         .whatsapp2 { bottom: 120px; padding: 10px 15px; font-size: 14px; }
 
-        /* Módulos más prolijos y alineados a la izquierda */
+        /* Módulos alineados y prolijos */
         .container { padding: 10px; }
         .module { padding: 15px; border-radius: 10px; }
         .details { padding: 15px; margin-top: 15px; }
@@ -169,8 +169,90 @@
 </header>
 
 <div class="container">
-    <!-- Módulos 1 a 5 (igual que antes, omitido aquí para no repetir todo el contenido) -->
-    <!-- Pega tus módulos tal cual están, este CSS ajustará la alineación y padding en celular -->
+
+    <div class="module module1">
+        <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
+        <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
+        <div class="details">
+            <ul>
+                <li>Ingreso a Manager en la nube</li>
+                <li>Interfaz general del sistema</li>
+                <li>Uso de carpeta compartida</li>
+                <li>Creación de artículos, rubros y marcas</li>
+                <li>Creación de depósitos</li>
+                <li>Creación de listas de precios</li>
+                <li>Ajuste de existencia</li>
+                <li>Actualización de Precios (Individual y global)</li>
+                <li>Transferencia entre depósitos</li>
+                <li>Reportes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="module module2">
+        <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
+        <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de clientes</li>
+                <li>Categorización de clientes</li>
+                <li>Alta de vendedores</li>
+                <li>Generación de Presupuestos, Notas de Pedido, Remitos, etc.</li>
+                <li>Factura de Venta Directa (o a partir de un comprobante previo)</li>
+                <li>Facturas de Venta de Mostrador</li>
+                <li>Notas de Crédito y Débito</li>
+                <li>Cuentas Corrientes y Cobranzas: visualización y generación de recibos desde Cta. Cte.</li>
+                <li>Emisión de Recibos, pendiente de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Primero se consulta al usuario cuáles son los comprobantes comerciales de venta que van a utilizar.</p>
+        </div>
+    </div>
+
+    <div class="module module3">
+        <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
+        <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de Proveedores</li>
+                <li>Alta compradores</li>
+                <li>Generación de Solicitudes de Compra, Pedidos de Cotización, Órdenes de Compra, Remitos, etc.</li>
+                <li>Carga de Factura de Compra Directa (o a partir de un comprobante previo)</li>
+                <li>Cuentas Corrientes y Pagos: visualización y generación de Órdenes de Pago desde Cta. Cte.</li>
+                <li>Emisión de Órdenes de pago, pendientes de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Se consulta al usuario sobre los comprobantes comerciales de compra que van a utilizar.</p>
+        </div>
+    </div>
+
+    <div class="module module4">
+        <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
+        <div class="details">
+            <ul>
+                <li>Alta de centro de fondos (cajas)</li>
+                <li>Alta de entidades bancarias, cuentas bancarias, chequeras</li>
+                <li>Alta de tarjetas de crédito y planes de pago</li>
+                <li>Alta de grupos y conceptos financieros</li>
+                <li>Registro de movimientos de caja, cierre de centro de fondos, transferencias</li>
+                <li>Registro y conciliación de cuentas bancarias y cheques</li>
+                <li>Otros procesos financieros según usuario</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">La carga de los Actualizadores se enseña en paralelo con el Módulo de Ventas.</p>
+        </div>
+    </div>
+
+    <div class="module module5">
+        <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
+        <div class="details">
+            <p><strong>Objetivo:</strong> Gestionar correctamente la Factura Electrónica.</p>
+            <p class="note">El orden de enseñanza puede variar según cada usuario.</p>
+        </div>
+    </div>
+
 </div>
 
 <footer>
