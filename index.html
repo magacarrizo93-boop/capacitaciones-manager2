@@ -35,7 +35,6 @@
         margin-bottom: 25px;
         position: relative;
         overflow: hidden;
-        color: white;
         transition: transform 0.4s, box-shadow 0.4s;
     }
     .module:hover {
@@ -43,11 +42,13 @@
         box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
+    /* TODOS LOS TITULOS DE MÓDULO EN NEGRO */
     .module h2 {
         margin-top: 0;
         display: flex;
         align-items: center;
         font-size: 26px;
+        color: #000; /* títulos negros */
     }
     .module h2 i {
         margin-right: 12px;
@@ -80,13 +81,13 @@
         position: relative;
     }
 
-    /* LOGO ABAJO IZQUIERDA CON EFECTO */
+    /* LOGO ABAJO IZQUIERDA CON EFECTO Y TAMAÑO REDUCIDO */
     .footer-logo {
         position: fixed;
         bottom: 20px;
         left: 20px;
-        max-height: 20vh;    
-        max-width: 20vw;     
+        max-height: 12vh;    /* más chico */
+        max-width: 15vw;     
         height: auto;
         width: auto;
         z-index: 1000;
@@ -97,8 +98,8 @@
     .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
     .module2 { background: linear-gradient(135deg, #2A6ED4, #4A9CFF); }
     .module3 { background: linear-gradient(135deg, #3A7CE6, #5AB8FF); }
-    .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); color: #000; }
-    .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); color: #000; }
+    .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); }
+    .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); }
 
     .whatsapp {
         position: fixed;
@@ -132,7 +133,7 @@
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        .footer-logo { max-height: 15vh; max-width: 30vw; bottom: 10px; left: 10px; }
+        .footer-logo { max-height: 10vh; max-width: 25vw; bottom: 10px; left: 10px; }
     }
 </style>
 </head>
@@ -259,6 +260,8 @@
 
 </body>
 </html>
+
+
 
 
 
