@@ -89,7 +89,7 @@
         position: relative;
     }
 
-    /* LOGO ABAJO IZQUIERDA FIJO */
+    /* LOGO ABAJO IZQUIERDA FIJO en PC */
     .footer-logo {
         position: fixed;
         bottom: 20px;
@@ -128,6 +128,7 @@
     .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); }
     .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); }
 
+    /* RESPONSIVE PARA CELULAR */
     @media (max-width: 600px) {
         header h1 { font-size: 28px; }
         header p { font-size: 16px; }
@@ -135,15 +136,18 @@
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
 
-        /* Logo más chico en celular */
+        /* Logo pasa al footer en celular */
         .footer-logo {
+            position: relative;   /* deja de ser fijo */
             max-height: 6vh;
-            max-width: 20vw;
-            bottom: 10px;
-            left: 10px;
+            max-width: 25vw;
+            margin: 20px 0 0 0;   /* separa del contenido */
+            left: auto;
+            bottom: auto;
+            display: block;
         }
 
-        /* WhatsApp separados para celular */
+        /* WhatsApp más arriba para celular */
         .whatsapp1 { bottom: 60px; padding: 10px 15px; font-size: 14px; }
         .whatsapp2 { bottom: 120px; padding: 10px 15px; font-size: 14px; }
     }
@@ -250,10 +254,10 @@
     <div class="footer-content">
         El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.
     </div>
-</footer>
 
-<!-- Logo fijo abajo izquierda -->
-<img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo">
+    <!-- Logo en footer (en celular se mostrará aquí) -->
+    <img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo">
+</footer>
 
 <!-- WhatsApp animados -->
 <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
@@ -261,4 +265,3 @@
 
 </body>
 </html>
-
