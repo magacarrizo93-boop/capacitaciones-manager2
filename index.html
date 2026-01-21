@@ -14,18 +14,15 @@
         color: #4a4a4a;
     }
 
-    /* HEADER */
     header {
         background: linear-gradient(90deg, #1F4FD8, #3A6BD6);
         color: white;
         padding: 40px 20px;
         text-align: center;
     }
-
     header h1 { margin: 0; font-size: 36px; }
     header p { font-size: 18px; margin-top: 10px; }
 
-    /* CONTENIDO */
     .container {
         max-width: 900px;
         margin: auto;
@@ -73,10 +70,8 @@
     }
     .details ul { margin: 0 0 0 20px; }
     .details ul li { margin-bottom: 8px; font-size: 15px; }
-
     .note { font-style: italic; font-size: 14px; margin-top: 12px; }
 
-    /* FOOTER */
     footer {
         text-align: center;
         margin: 60px 0 20px;
@@ -85,24 +80,26 @@
         position: relative;
     }
 
-    /* LOGO FIJO ABAJO IZQUIERDA, GRANDE Y NÍTIDO */
+    /* LOGO RESPONSIVE PREMIUM ABAJO IZQUIERDA CON TRANSFORMACIONES */
     .footer-logo {
         position: fixed;
         bottom: 20px;
         left: 20px;
-        height: 150px; /* más grande que antes */
+        max-height: 20vh;    
+        max-width: 20vw;     
+        height: auto;
+        width: auto;
         z-index: 1000;
         pointer-events: none;
+        transition: transform 0.2s ease-out;
     }
 
-    /* Gradientes llamativos para módulos */
     .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
     .module2 { background: linear-gradient(135deg, #2A6ED4, #4A9CFF); }
     .module3 { background: linear-gradient(135deg, #3A7CE6, #5AB8FF); }
     .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); color: #000; }
     .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); color: #000; }
 
-    /* WhatsApp animado */
     .whatsapp {
         position: fixed;
         right: 20px;
@@ -129,14 +126,13 @@
         100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
         header h1 { font-size: 28px; }
         header p { font-size: 16px; }
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        .footer-logo { height: 100px; bottom: 10px; left: 10px; } /* más grande que antes */
+        .footer-logo { max-height: 15vh; max-width: 30vw; bottom: 10px; left: 10px; }
     }
 </style>
 </head>
@@ -148,92 +144,7 @@
 </header>
 
 <div class="container">
-
     <!-- Módulos 1 a 5 (igual que antes) -->
-
-    <div class="module module1">
-        <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
-        <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
-        <div class="details">
-            <ul>
-                <li>Ingreso a Manager en la nube</li>
-                <li>Interfaz general del sistema</li>
-                <li>Uso de carpeta compartida</li>
-                <li>Creación de artículos, rubros y marcas</li>
-                <li>Creación de depósitos</li>
-                <li>Creación de listas de precios</li>
-                <li>Ajuste de existencia</li>
-                <li>Actualización de Precios (Individual y global)</li>
-                <li>Transferencia entre depósitos</li>
-                <li>Reportes</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="module module2">
-        <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
-        <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
-        <div class="details">
-            <ul>
-                <li>Alta de clientes</li>
-                <li>Categorización de clientes</li>
-                <li>Alta de vendedores</li>
-                <li>Generación de Presupuestos, Notas de Pedido, Remitos, etc.</li>
-                <li>Factura de Venta Directa (o a partir de un comprobante previo)</li>
-                <li>Facturas de Venta de Mostrador</li>
-                <li>Notas de Crédito y Débito</li>
-                <li>Cuentas Corrientes y Cobranzas: visualización y generación de recibos desde Cta. Cte.</li>
-                <li>Emisión de Recibos, pendiente de imputación</li>
-                <li>Imputación de comprobantes</li>
-                <li>Reportes</li>
-            </ul>
-            <p class="note">Primero se consulta al usuario cuáles son los comprobantes comerciales de venta que van a utilizar.</p>
-        </div>
-    </div>
-
-    <div class="module module3">
-        <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
-        <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
-        <div class="details">
-            <ul>
-                <li>Alta de Proveedores</li>
-                <li>Alta compradores</li>
-                <li>Generación de Solicitudes de Compra, Pedidos de Cotización, Órdenes de Compra, Remitos, etc.</li>
-                <li>Carga de Factura de Compra Directa (o a partir de un comprobante previo)</li>
-                <li>Cuentas Corrientes y Pagos: visualización y generación de Órdenes de Pago desde Cta. Cte.</li>
-                <li>Emisión de Órdenes de pago, pendientes de imputación</li>
-                <li>Imputación de comprobantes</li>
-                <li>Reportes</li>
-            </ul>
-            <p class="note">Se consulta al usuario sobre los comprobantes comerciales de compra que van a utilizar.</p>
-        </div>
-    </div>
-
-    <div class="module module4">
-        <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
-        <div class="details">
-            <ul>
-                <li>Alta de centro de fondos (cajas)</li>
-                <li>Alta de entidades bancarias, cuentas bancarias, chequeras</li>
-                <li>Alta de tarjetas de crédito y planes de pago</li>
-                <li>Alta de grupos y conceptos financieros</li>
-                <li>Registro de movimientos de caja, cierre de centro de fondos, transferencias</li>
-                <li>Registro y conciliación de cuentas bancarias y cheques</li>
-                <li>Otros procesos financieros según usuario</li>
-                <li>Reportes</li>
-            </ul>
-            <p class="note">La carga de los Actualizadores se enseña en paralelo con el Módulo de Ventas.</p>
-        </div>
-    </div>
-
-    <div class="module module5">
-        <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
-        <div class="details">
-            <p><strong>Objetivo:</strong> Gestionar correctamente la Factura Electrónica.</p>
-            <p class="note">El orden de enseñanza puede variar según cada usuario.</p>
-        </div>
-    </div>
-
 </div>
 
 <footer>
@@ -242,15 +153,30 @@
     </div>
 </footer>
 
-<!-- Logo fijo abajo izquierda, GRANDE y nítido -->
-<img src="LogoProdigia.jpg" alt="Logo Prodigia" class="footer-logo">
+<!-- Logo responsive premium abajo izquierda -->
+<img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo" id="logo">
 
 <!-- WhatsApp animados -->
 <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
 <a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
 
+<script>
+    // Efecto parallax + cambio de tamaño al hacer scroll
+    const logo = document.getElementById('logo');
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+        // Mueve el logo un poco hacia arriba
+        let moveY = scrollY * 0.2;
+        // Escala el logo ligeramente entre 1 y 1.1
+        let scale = 1 + Math.min(scrollY / 1000, 0.1);
+        logo.style.transform = `translateY(${moveY}px) scale(${scale})`;
+    });
+</script>
+
 </body>
 </html>
+
+
 
 
 
