@@ -18,25 +18,8 @@
     header {
         background: linear-gradient(90deg, #1F4FD8, #3A6BD6);
         color: white;
-        padding: 20px 20px 40px 20px;
+        padding: 40px 20px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        gap: 20px; /* separación entre logos */
-    }
-
-    header .logos img {
-        height: 80px;
-        max-width: 100%;
-        object-fit: contain;
     }
 
     header h1 { margin: 0; font-size: 36px; }
@@ -94,10 +77,18 @@
     .note { font-style: italic; font-size: 14px; margin-top: 12px; }
 
     footer {
-        text-align: center;
+        text-align: left;
         margin: 40px 0 20px;
         font-size: 14px;
         color: #666;
+        position: relative;
+        padding-left: 20px; /* espacio para el logo */
+    }
+
+    footer img {
+        height: 60px;
+        display: block;
+        margin-top: 20px;
     }
 
     /* Gradientes llamativos para módulos */
@@ -141,17 +132,13 @@
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        header .logos img { height: 60px; } /* logos más pequeños en celular */
+        footer img { height: 50px; }
     }
 </style>
 </head>
 <body>
 
 <header>
-    <div class="logos">
-        <img src="LogoProdigia.jpg" alt="Logo Prodigia">
-        <img src="Logo Manager.jpg" alt="Logo Manager2">
-    </div>
     <h1>Capacitaciones Manager2</h1>
     <p>Formación práctica y visual para la gestión eficiente de tu empresa</p>
 </header>
@@ -250,6 +237,8 @@
 
 <footer>
     <p>El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.</p>
+    <!-- Logo abajo a la izquierda -->
+    <img src="LogoProdigia.jpg" alt="Logo Prodigia">
 </footer>
 
 <!-- WhatsApp animados -->
@@ -258,6 +247,7 @@
 
 </body>
 </html>
+
 
 
 
