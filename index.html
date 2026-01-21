@@ -76,19 +76,24 @@
 
     .note { font-style: italic; font-size: 14px; margin-top: 12px; }
 
+    /* FOOTER */
     footer {
-        text-align: left;
-        margin: 40px 0 20px;
+        text-align: center;
+        margin: 60px 0 20px; /* espacio para logo */
         font-size: 14px;
         color: #666;
         position: relative;
-        padding-left: 20px; /* espacio para el logo */
     }
 
-    footer img {
-        height: 60px;
-        display: block;
-        margin-top: 20px;
+    /* LOGO FIJO ABAJO IZQUIERDA COMO MARCA DE AGUA */
+    .footer-logo {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        height: 80px;
+        opacity: 0.25; /* semi-transparente */
+        z-index: 1000;
+        pointer-events: none; /* para que no interfiera con clicks */
     }
 
     /* Gradientes llamativos para módulos */
@@ -125,14 +130,14 @@
         100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    /* Responsive para móviles */
+    /* Responsive */
     @media (max-width: 600px) {
         header h1 { font-size: 28px; }
         header p { font-size: 16px; }
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        footer img { height: 50px; }
+        .footer-logo { height: 50px; bottom: 10px; left: 10px; }
     }
 </style>
 </head>
@@ -145,7 +150,8 @@
 
 <div class="container">
 
-    <!-- Módulo 1 -->
+    <!-- Módulos aquí (los 5 módulos igual que antes) -->
+
     <div class="module module1">
         <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
         <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
@@ -165,7 +171,6 @@
         </div>
     </div>
 
-    <!-- Módulo 2 -->
     <div class="module module2">
         <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
         <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
@@ -187,7 +192,6 @@
         </div>
     </div>
 
-    <!-- Módulo 3 -->
     <div class="module module3">
         <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
         <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
@@ -206,7 +210,6 @@
         </div>
     </div>
 
-    <!-- Módulo 4 -->
     <div class="module module4">
         <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
         <div class="details">
@@ -224,7 +227,6 @@
         </div>
     </div>
 
-    <!-- Módulo 5 -->
     <div class="module module5">
         <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
         <div class="details">
@@ -236,10 +238,13 @@
 </div>
 
 <footer>
-    <p>El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.</p>
-    <!-- Logo abajo a la izquierda -->
-    <img src="LogoProdigia.jpg" alt="Logo Prodigia">
+    <div class="footer-content">
+        El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.
+    </div>
 </footer>
+
+<!-- Logo fijo como marca de agua -->
+<img src="LogoProdigia.jpg" alt="Logo Prodigia" class="footer-logo">
 
 <!-- WhatsApp animados -->
 <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
@@ -247,7 +252,6 @@
 
 </body>
 </html>
-
 
 
 
