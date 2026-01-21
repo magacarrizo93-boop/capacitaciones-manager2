@@ -80,7 +80,7 @@
         position: relative;
     }
 
-    /* LOGO RESPONSIVE PREMIUM ABAJO IZQUIERDA CON TRANSFORMACIONES */
+    /* LOGO ABAJO IZQUIERDA CON EFECTO */
     .footer-logo {
         position: fixed;
         bottom: 20px;
@@ -144,7 +144,93 @@
 </header>
 
 <div class="container">
-    <!-- Módulos 1 a 5 (igual que antes) -->
+    <!-- Módulo 1 -->
+    <div class="module module1">
+        <h2><i class="fas fa-layer-group"></i> Capacitación 1 | Interfaz y Stock</h2>
+        <p><strong>Objetivo:</strong> Conocer el entorno del sistema y gestionar correctamente artículos y stock.</p>
+        <div class="details">
+            <ul>
+                <li>Ingreso a Manager en la nube</li>
+                <li>Interfaz general del sistema</li>
+                <li>Uso de carpeta compartida</li>
+                <li>Creación de artículos, rubros y marcas</li>
+                <li>Creación de depósitos</li>
+                <li>Creación de listas de precios</li>
+                <li>Ajuste de existencia</li>
+                <li>Actualización de Precios (Individual y global)</li>
+                <li>Transferencia entre depósitos</li>
+                <li>Reportes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Módulo 2 -->
+    <div class="module module2">
+        <h2><i class="fas fa-dollar-sign"></i> Capacitación 2 | Ventas</h2>
+        <p><strong>Objetivo:</strong> Gestionar el circuito completo de ventas y cobranzas.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de clientes</li>
+                <li>Categorización de clientes</li>
+                <li>Alta de vendedores</li>
+                <li>Generación de Presupuestos, Notas de Pedido, Remitos, etc.</li>
+                <li>Factura de Venta Directa (o a partir de un comprobante previo)</li>
+                <li>Facturas de Venta de Mostrador</li>
+                <li>Notas de Crédito y Débito</li>
+                <li>Cuentas Corrientes y Cobranzas: visualización y generación de recibos desde Cta. Cte.</li>
+                <li>Emisión de Recibos, pendiente de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Primero se consulta al usuario cuáles son los comprobantes comerciales de venta que van a utilizar.</p>
+        </div>
+    </div>
+
+    <!-- Módulo 3 -->
+    <div class="module module3">
+        <h2><i class="fas fa-shopping-cart"></i> Capacitación 3 | Compras</h2>
+        <p><strong>Objetivo:</strong> Administrar el proceso de compras y pagos a proveedores.</p>
+        <div class="details">
+            <ul>
+                <li>Alta de Proveedores</li>
+                <li>Alta compradores</li>
+                <li>Generación de Solicitudes de Compra, Pedidos de Cotización, Órdenes de Compra, Remitos, etc.</li>
+                <li>Carga de Factura de Compra Directa (o a partir de un comprobante previo)</li>
+                <li>Cuentas Corrientes y Pagos: visualización y generación de Órdenes de Pago desde Cta. Cte.</li>
+                <li>Emisión de Órdenes de pago, pendientes de imputación</li>
+                <li>Imputación de comprobantes</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">Se consulta al usuario sobre los comprobantes comerciales de compra que van a utilizar.</p>
+        </div>
+    </div>
+
+    <!-- Módulo 4 -->
+    <div class="module module4">
+        <h2><i class="fas fa-university"></i> Capacitación 4 | Financiero</h2>
+        <div class="details">
+            <ul>
+                <li>Alta de centro de fondos (cajas)</li>
+                <li>Alta de entidades bancarias, cuentas bancarias, chequeras</li>
+                <li>Alta de tarjetas de crédito y planes de pago</li>
+                <li>Alta de grupos y conceptos financieros</li>
+                <li>Registro de movimientos de caja, cierre de centro de fondos, transferencias</li>
+                <li>Registro y conciliación de cuentas bancarias y cheques</li>
+                <li>Otros procesos financieros según usuario</li>
+                <li>Reportes</li>
+            </ul>
+            <p class="note">La carga de los Actualizadores se enseña en paralelo con el Módulo de Ventas.</p>
+        </div>
+    </div>
+
+    <!-- Módulo 5 -->
+    <div class="module module5">
+        <h2><i class="fas fa-file-invoice"></i> Capacitación 5 | Factura Electrónica</h2>
+        <div class="details">
+            <p><strong>Objetivo:</strong> Gestionar correctamente la Factura Electrónica.</p>
+            <p class="note">El orden de enseñanza puede variar según cada usuario.</p>
+        </div>
+    </div>
 </div>
 
 <footer>
@@ -165,9 +251,7 @@
     const logo = document.getElementById('logo');
     window.addEventListener('scroll', () => {
         let scrollY = window.scrollY;
-        // Mueve el logo un poco hacia arriba
         let moveY = scrollY * 0.2;
-        // Escala el logo ligeramente entre 1 y 1.1
         let scale = 1 + Math.min(scrollY / 1000, 0.1);
         logo.style.transform = `translateY(${moveY}px) scale(${scale})`;
     });
@@ -175,7 +259,6 @@
 
 </body>
 </html>
-
 
 
 
