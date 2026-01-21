@@ -102,12 +102,7 @@
         pointer-events: none;
     }
 
-    .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
-    .module2 { background: linear-gradient(135deg, #2A6ED4, #4A9CFF); }
-    .module3 { background: linear-gradient(135deg, #3A7CE6, #5AB8FF); }
-    .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); }
-    .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); }
-
+    /* WhatsApp fijo */
     .whatsapp {
         position: fixed;
         right: 20px;
@@ -119,20 +114,19 @@
         font-weight: bold;
         text-decoration: none;
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        animation: pulse 2s infinite;
         display: flex;
         align-items: center;
         gap: 8px;
+        z-index: 1000;
     }
-    .whatsapp:hover { transform: scale(1.1); animation: none; }
     .whatsapp1 { bottom: 20px; }
     .whatsapp2 { bottom: 90px; }
 
-    @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-        70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
+    .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
+    .module2 { background: linear-gradient(135deg, #2A6ED4, #4A9CFF); }
+    .module3 { background: linear-gradient(135deg, #3A7CE6, #5AB8FF); }
+    .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); }
+    .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); }
 
     @media (max-width: 600px) {
         header h1 { font-size: 28px; }
@@ -140,7 +134,18 @@
         .module h2 { font-size: 22px; }
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
-        .footer-logo { max-height: 10vh; max-width: 25vw; bottom: 10px; left: 10px; }
+
+        /* Logo más chico en celular */
+        .footer-logo {
+            max-height: 6vh;
+            max-width: 20vw;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        /* WhatsApp separados para celular */
+        .whatsapp1 { bottom: 60px; padding: 10px 15px; font-size: 14px; }
+        .whatsapp2 { bottom: 120px; padding: 10px 15px; font-size: 14px; }
     }
 </style>
 </head>
@@ -248,7 +253,7 @@
 </footer>
 
 <!-- Logo fijo abajo izquierda -->
-<img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo" id="logo">
+<img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo">
 
 <!-- WhatsApp animados -->
 <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
@@ -256,3 +261,4 @@
 
 </body>
 </html>
+
