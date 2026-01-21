@@ -89,7 +89,7 @@
         position: relative;
     }
 
-    /* LOGO ABAJO IZQUIERDA FIJO en PC */
+    /* Logo abajo izquierda en PC */
     .footer-logo {
         position: fixed;
         bottom: 20px;
@@ -136,7 +136,7 @@
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
 
-        /* Logo pasa al footer en celular */
+        /* Logo pasa al footer en celular, NO FIJO */
         .footer-logo {
             position: relative;
             max-height: 6vh;
@@ -147,9 +147,9 @@
             display: block;
         }
 
-        /* WhatsApp más arriba */
-        .whatsapp1 { bottom: 60px; padding: 10px 15px; font-size: 14px; }
-        .whatsapp2 { bottom: 120px; padding: 10px 15px; font-size: 14px; }
+        /* WhatsApp más arriba y dentro del flujo */
+        .whatsapp1 { position: relative; bottom: auto; padding: 10px 15px; font-size: 14px; margin-bottom: 10px; }
+        .whatsapp2 { position: relative; bottom: auto; padding: 10px 15px; font-size: 14px; margin-bottom: 20px; }
 
         /* Módulos alineados y prolijos */
         .container { padding: 10px; }
@@ -253,6 +253,10 @@
         </div>
     </div>
 
+    <!-- WhatsApp para celular dentro del flujo -->
+    <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
+    <a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
+
 </div>
 
 <footer>
@@ -260,13 +264,9 @@
         El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.
     </div>
 
-    <!-- Logo en footer (en celular se mostrará aquí) -->
+    <!-- Logo en footer -->
     <img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo">
 </footer>
-
-<!-- WhatsApp animados -->
-<a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
-<a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
 
 </body>
 </html>
