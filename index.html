@@ -56,6 +56,14 @@
         color: #FFD700;
     }
 
+    /* Objetivo de los módulos 1-3 en blanco */
+    .module1 p strong, .module2 p strong, .module3 p strong {
+        color: #fff;
+    }
+    .module1 p, .module2 p, .module3 p {
+        color: #fff;
+    }
+
     .details {
         background-color: #ffffff;
         color: #000;
@@ -81,18 +89,17 @@
         position: relative;
     }
 
-    /* LOGO ABAJO IZQUIERDA CON EFECTO Y TAMAÑO REDUCIDO */
+    /* LOGO ABAJO IZQUIERDA FIJO */
     .footer-logo {
         position: fixed;
         bottom: 20px;
         left: 20px;
-        max-height: 12vh;    /* más chico */
-        max-width: 15vw;     
+        max-height: 12vh;
+        max-width: 15vw;
         height: auto;
         width: auto;
         z-index: 1000;
         pointer-events: none;
-        transition: transform 0.2s ease-out;
     }
 
     .module1 { background: linear-gradient(135deg, #1F4FD8, #285FFF); }
@@ -240,31 +247,12 @@
     </div>
 </footer>
 
-<!-- Logo responsive premium abajo izquierda -->
+<!-- Logo fijo abajo izquierda -->
 <img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo" id="logo">
 
 <!-- WhatsApp animados -->
 <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
 <a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
 
-<script>
-    // Efecto parallax + cambio de tamaño al hacer scroll
-    const logo = document.getElementById('logo');
-    window.addEventListener('scroll', () => {
-        let scrollY = window.scrollY;
-        let moveY = scrollY * 0.2;
-        let scale = 1 + Math.min(scrollY / 1000, 0.1);
-        logo.style.transform = `translateY(${moveY}px) scale(${scale})`;
-    });
-</script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
