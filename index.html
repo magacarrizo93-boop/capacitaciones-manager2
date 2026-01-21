@@ -42,7 +42,6 @@
         box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
-    /* TITULOS DE MÓDULO EN NEGRO */
     .module h2 {
         margin-top: 0;
         display: flex;
@@ -56,7 +55,6 @@
         color: #FFD700;
     }
 
-    /* Objetivo módulos 1-3 en blanco */
     .module1 p strong, .module2 p strong, .module3 p strong {
         color: #fff;
     }
@@ -89,7 +87,6 @@
         position: relative;
     }
 
-    /* Logo abajo izquierda en PC */
     .footer-logo {
         position: fixed;
         bottom: 20px;
@@ -102,7 +99,6 @@
         pointer-events: none;
     }
 
-    /* WhatsApp fijo */
     .whatsapp {
         position: fixed;
         right: 20px;
@@ -128,7 +124,6 @@
     .module4 { background: linear-gradient(135deg, #4A8CF2, #7FC3FF); }
     .module5 { background: linear-gradient(135deg, #5AA0FF, #A0D4FF); }
 
-    /* RESPONSIVE PARA CELULAR */
     @media (max-width: 600px) {
         header h1 { font-size: 28px; }
         header p { font-size: 16px; }
@@ -136,7 +131,6 @@
         .module h2 i { font-size: 28px; }
         .details ul li { font-size: 14px; }
 
-        /* Logo pasa al footer en celular, NO FIJO */
         .footer-logo {
             position: relative;
             max-height: 6vh;
@@ -147,11 +141,19 @@
             display: block;
         }
 
-        /* WhatsApp más arriba y dentro del flujo */
-        .whatsapp1 { position: relative; bottom: auto; padding: 10px 15px; font-size: 14px; margin-bottom: 10px; }
-        .whatsapp2 { position: relative; bottom: auto; padding: 10px 15px; font-size: 14px; margin-bottom: 20px; }
+        /* WhatsApp más compactos y alineados a la derecha */
+        .whatsapp1, .whatsapp2 {
+            position: relative;
+            bottom: auto;
+            padding: 8px 12px;
+            font-size: 14px;
+            margin: 5px 0;
+            width: auto;
+            display: inline-flex;
+            justify-content: flex-end;
+            float: right; /* alineado derecha */
+        }
 
-        /* Módulos alineados y prolijos */
         .container { padding: 10px; }
         .module { padding: 15px; border-radius: 10px; }
         .details { padding: 15px; margin-top: 15px; }
@@ -253,10 +255,6 @@
         </div>
     </div>
 
-    <!-- WhatsApp para celular dentro del flujo -->
-    <a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
-    <a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
-
 </div>
 
 <footer>
@@ -264,9 +262,12 @@
         El contenido y la profundidad de las capacitaciones se adaptan a cada cliente.
     </div>
 
-    <!-- Logo en footer -->
     <img src="LogoProdigia.jpeg" alt="Logo Prodigia" class="footer-logo">
 </footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/543517510694" target="_blank" class="whatsapp whatsapp1"><i class="fab fa-whatsapp"></i> 351-7510694</a>
+<a href="https://wa.me/543517510536" target="_blank" class="whatsapp whatsapp2"><i class="fab fa-whatsapp"></i> 351-7510536</a>
 
 </body>
 </html>
